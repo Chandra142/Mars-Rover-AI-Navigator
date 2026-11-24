@@ -49,6 +49,7 @@ dist/
 models/*.keras
 outputs/*
 !outputs/.gitkeep
+!outputs/mars-rover-demo.gif
 runs/
 wandb/
 

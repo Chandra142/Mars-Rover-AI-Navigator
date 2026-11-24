@@ -6,6 +6,9 @@ Course project for INT422 Deep Learning. Data: NASA/JPL AI4Mars.
 ## Pipeline
 `rover image -> U-Net mask -> cost grid -> A* route -> Streamlit overlay`
 
+## Live demo
+![Mars Rover AI Navigator demo](outputs/mars-rover-demo.gif)
+
 ## Setup
 ```bash
 pip install -r requirements.txt
