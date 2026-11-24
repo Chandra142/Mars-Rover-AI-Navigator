@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Python build and packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Logs
+*.log
+
+# ML model outputs and caches
+*.h5
+*.onnx
+models/*.keras
+outputs/*
+!outputs/.gitkeep
+runs/
+wandb/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+.claude
+mobilenet.keras
+unet.keras

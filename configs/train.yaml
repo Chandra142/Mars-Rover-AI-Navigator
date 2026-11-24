@@ -1,0 +1,19 @@
+data:
+  images_dir: null      # set via CLI: --images-dir
+  labels_dir: null      # set via CLI: --labels-dir
+  img_size: 256
+  split: [0.8, 0.1, 0.1]   # train / val / test
+  seed: 42
+  num_classes: 4        # 0 soil, 1 bedrock, 2 sand, 3 big rock
+  ignore_label: 255     # unlabeled pixels, excluded from loss and metrics
+  max_images: null      # set e.g. 2000 for a quick first run
+train:
+  batch_size: 16
+  epochs: 30
+  lr: 0.001
+  dice_weight: 1.0
+  use_class_weights: true
+  imagenet_weights: true   # MobileNetV2 encoder; needs internet (Kaggle: turn Internet on)
+paths:
+  models_dir: models
+  outputs_dir: outputs

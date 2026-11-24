@@ -1,0 +1,11 @@
+# Traversal cost per terrain class (higher = riskier). Used by the planner and
+# as the default values of the Streamlit sliders.
+# big_rock: null means BLOCKED (impassable).
+costs:
+  bedrock: 1.0
+  soil: 2.0
+  sand: 5.0
+  big_rock: null
+  unknown: 8.0
+grid_size: 64        # image is downsampled to grid_size x grid_size for planning
+inflate_blocked: 1   # safety margin (in grid cells) around blocked cells
