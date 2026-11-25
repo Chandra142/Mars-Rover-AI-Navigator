@@ -34,7 +34,8 @@ Gives mIoU, mDice, pixel accuracy, per-class IoU, confusion matrices and predict
 ```bash
 streamlit run src/app/streamlit_app.py
 ```
-Tick "synthetic demo terrain" to try the planner before any model is trained.
+The deployment model is `models/mobilenet.keras` (included in the repository). Tick
+"synthetic demo terrain" to try the planner without model inference.
 
 ## Tests
 ```bash

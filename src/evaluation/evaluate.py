@@ -15,9 +15,7 @@ import tensorflow as tf
 
 from src.data.dataset import make_dataset
 from src.evaluation.metrics import CLASS_NAMES, confusion_matrix, scores_from_cm
-
-PALETTE = np.array([[160, 110, 60], [150, 150, 150], [240, 220, 100], [220, 40, 40],
-                    [0, 0, 0]], dtype=np.uint8)   # soil, bedrock, sand, big rock, unlabeled
+from src.evaluation.palette import PALETTE
 
 
 def colorize(mask):

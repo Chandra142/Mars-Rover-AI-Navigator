@@ -13,9 +13,9 @@ import cv2
 import numpy as np
 import streamlit as st
 
-from src.evaluation.evaluate import PALETTE
 from src.planning.cost_map import class_grid_to_cost, load_costs, mask_to_grid
 from src.planning.planners import astar, dijkstra, nearest_free, path_metrics, straight_line
+from src.evaluation.palette import PALETTE
 
 IMG = 256
 st.set_page_config(page_title="Mars Rover AI Navigator", layout="wide")
@@ -87,10 +87,10 @@ cost_img = cv2.applyColorMap(cv2.resize((255 * cost_vis / cost_vis.max()).astype
                                         interpolation=cv2.INTER_NEAREST), cv2.COLORMAP_INFERNO)
 
 c1, c2, c3, c4 = st.columns(4)
-c1.image(image, caption="Input", use_container_width=True)
-c2.image(overlay, caption="Segmentation (brown soil, gray bedrock, yellow sand, red rock)", use_container_width=True)
-c3.image(cv2.cvtColor(cost_img, cv2.COLOR_BGR2RGB), caption="Cost map (bright = costly)", use_container_width=True)
-c4.image(route, caption=f"Route: {algo} (cyan) vs straight line (white)", use_container_width=True)
+c1.image(image, caption="Input", width="stretch")
+c2.image(overlay, caption="Segmentation (brown soil, gray bedrock, yellow sand, red rock)", width="stretch")
+c3.image(cv2.cvtColor(cost_img, cv2.COLOR_BGR2RGB), caption="Cost map (bright = costly)", width="stretch")
+c4.image(route, caption=f"Route: {algo} (cyan) vs straight line (white)", width="stretch")
 
 if path is None:
     st.error("No safe route exists with the current costs. Lower the safety margin or unblock rocks.")
